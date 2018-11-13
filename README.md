@@ -1,4 +1,9 @@
-<<<<<<< HEAD
+authored by
+https://github.com/suborb/philips_android_tv
+
+this is my private repo just to store some modifications made by my own.
+Great job was made by suborb.
+
 # philips_android_tv
 Tools to control Philips 2016 Android TVs
 
