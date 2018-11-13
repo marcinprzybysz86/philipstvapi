@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # philips_android_tv
 Tools to control Philips 2016 Android TVs
 
@@ -14,3 +15,7 @@ Channel status and changes are performed using a different protocol that isn't d
 
 The tool here will do the initial pairing. The credentials can then be used in a standard way
 (digest) in other tools.
+=======
+# philiptstvapi
+Philips smart tv jointspace api > 2016 
+>>>>>>> 5a53537ee14b33a01056b78935c635d5b3b50cdd
