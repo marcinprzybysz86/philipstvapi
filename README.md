@@ -24,3 +24,23 @@ The tool here will do the initial pairing. The credentials can then be used in a
 # philiptstvapi
 Philips smart tv jointspace api > 2016 
 >>>>>>> 5a53537ee14b33a01056b78935c635d5b3b50cdd
+
+
+Instalation on raspberry pi
+======
+- apt-get install python-requests
+- apt-get install python-pycrypto
+
+First: pair the device
+
+* python philips.py --host XXX.XXX.XXX.XXX pair
+where XXX is your tv ip address
+
+* next you'll obtain an username and password. Write them down and use in your scripts.
+example: python philips.py --user YOURUSER --pass YOURPASS --host IPADDRESS command.
+
+Available commands:
+* standby
+* powerstate
+* ambion
+* ambioff
