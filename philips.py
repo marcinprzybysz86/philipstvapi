@@ -85,7 +85,6 @@ def main():
     args = parser.parse_args()
 
     config['address'] = args.host
- 
     if args.command == "pair":
         pair(config)
 
@@ -116,7 +115,7 @@ def main():
     if args.command == "powerstate":
 	config['path'] = "6/powerstate" 
     if args.command == "ambimode":
-        config['path'] = "6/ambilight/currentconfiguration"
+        config['path'] = "6/ambilight/mode"
         
 	get_command(config)
 
@@ -130,6 +129,10 @@ def main():
         config['path'] = "6/ambilight/power"
 	config['body'] = { "power" : "On" }
 	post_command(config)
+	config['path'] = "6/ambilight/mode"
+        config['body'] = { "current" : "FOLLOW_VIDEO" }
+        post_command(config)
+
     if args.command == "ambioff":
         config['path'] = "6/ambilight/power"
         config['body'] = { "power" : "Off" }
