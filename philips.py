@@ -112,13 +112,30 @@ def main():
         config['path'] = "6/system/timestamp"
         config['path'] = "6/menuitems/settings/structure"
         config['path'] = "6/ambilight/cached"
-      
-        get_command(config)
+    
+    if args.command == "powerstate":
+	config['path'] = "6/powerstate" 
+    if args.command == "ambimode":
+        config['path'] = "6/ambilight/currentconfiguration"
+        
+	get_command(config)
+
+   
 
     if args.command == "standby":
         config['path'] = "6/input/key"
         config['body'] = { "key" : "Standby" }
         post_command(config)
+    if args.command == "ambion":
+        config['path'] = "6/ambilight/power"
+	config['body'] = { "power" : "On" }
+	post_command(config)
+    if args.command == "ambioff":
+        config['path'] = "6/ambilight/power"
+        config['body'] = { "power" : "Off" }
+        post_command(config)
+
+
 
 main()
 
